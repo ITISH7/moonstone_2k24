@@ -134,9 +134,10 @@ const BasicDetails = (props) => {
           eventName: props.eventName,
         })
         .then((res) => {
+          console.log("hello");
         })
         .catch((err) => {
-          // console.log(err);
+          console.log(err)
         });
         let finalstep;
           if (props.length === 2) {
