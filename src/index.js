@@ -12,13 +12,13 @@ ReactDOM.render(
     clientId="oMirhHG4xzwCBAdUOtA11X4wPC7C7tcE"
     authorizationParams={{
       redirect_uri: window.location.origin,
-      audience : "trytry",
-      scope:"openid profile email",
+      audience: "trytry",
+      scope: "openid profile email",
     }}
   >
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Auth0Provider>,
   document.getElementById("root")
 );

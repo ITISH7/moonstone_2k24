@@ -78,6 +78,7 @@ function validateAdhaar(aadhaar_number) {
   }
 }
 const BasicDetails = (props) => {
+  const { getAccessTokenSilently } = useAuth0()
   const [email, setemail] = useState("");
   const emailHandler = (event) => {
     setemail(event.target.value);
@@ -103,7 +104,8 @@ const BasicDetails = (props) => {
     setcollegename(event.target.value);
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
+    const token = await getAccessTokenSilently()
     event.preventDefault();
     if (
       fullName === "" ||
@@ -132,6 +134,10 @@ const BasicDetails = (props) => {
           email: props.useremail,
           eventid: props.eventid,
           eventName: props.eventName,
+        }, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          }
         })
         .then((res) => {
           console.log("hello");
@@ -139,25 +145,25 @@ const BasicDetails = (props) => {
         .catch((err) => {
           console.log(err)
         });
-        let finalstep;
-          if (props.length === 2) {
-            finalstep = true;
-          } else {
-            finalstep = false;
-          }
-          // console.log(props.length, finalstep);
-          props.nextstep(
-            {
-              email: email,
-              name: fullName,
-              phone_no: Phonenumber,
-              aadhar_no: adharnumber,
-              gender: gender,
-              college: collegename,
-            },
-            props.activeStep + 1,
-            finalstep
-          );
+      let finalstep;
+      if (props.length === 2) {
+        finalstep = true;
+      } else {
+        finalstep = false;
+      }
+      // console.log(props.length, finalstep);
+      props.nextstep(
+        {
+          email: email,
+          name: fullName,
+          phone_no: Phonenumber,
+          aadhar_no: adharnumber,
+          gender: gender,
+          college: collegename,
+        },
+        props.activeStep + 1,
+        finalstep
+      );
     }
   };
   return (
