@@ -132,10 +132,6 @@ const BasicDetails = (props) => {
           email: props.useremail,
           eventid: props.eventid,
           eventName: props.eventName,
-        },{
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         })
         .then((res) => {
           console.log("hello");
