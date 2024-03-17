@@ -1,0 +1,30 @@
+.about_page {
+  padding-top: 100px;
+  /* background: url(../assets/backGround.svg); */
+  /* padding: 150px 50px; */
+  width: 100vw;
+}
+
+.schedule_section {
+  /* background: url(../assets/backGround.svg); */
+  padding: 150px 50px;
+  width: 100vw;
+}
+.headingx {
+  margin-top: 1vw;
+  text-align: center;
+  font-size: 7vw;
+  font-weight: 100;
+  text-shadow: 1px 1px 1px blue, 0 0 0.5em rgba(0, 0, 255, 0.671),
+    0 0 0.5em rgba(1, 1, 255, 0.644);
+  color: white;
+  font-family: myFirstFont;
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 45%;
+  }
+  .headingx {
+    font-size: 13vw;
+  }
+}

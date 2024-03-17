@@ -1,0 +1,59 @@
+.scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10;
+    position: relative;
+
+
+}
+
+.scroller_in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller_in {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.scroller h4:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.scroller_in img {
+    margin: 1vw;
+    border-radius: 30px;
+    height: 32vh;
+    width: 25vw;
+}
+@media screen and (max-width: 480px) {
+    .scroller_in img {
+        margin: 1vw;
+        border-radius: 30px;
+        height: 13vh;
+        width: 33vw;
+    }
+}
+
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

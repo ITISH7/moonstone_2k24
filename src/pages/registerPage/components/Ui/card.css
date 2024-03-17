@@ -1,0 +1,19 @@
+.card {
+  background: rgb(55, 52, 52);
+  background: linear-gradient(
+    311deg,
+    rgba(55, 52, 52, 1) 0%,
+    rgba(99, 99, 99, 1) 100%
+  );
+  margin-top: 8vw;
+  margin-bottom: 3vw;
+  width: 45%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+  .card {
+    margin-top: 20vw;
+    width: 100%;
+  }
+}

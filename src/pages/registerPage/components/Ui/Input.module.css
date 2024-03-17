@@ -1,0 +1,43 @@
+.input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.input label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 480px) {
+  .input label {
+    font-size: 50px;
+  }
+  .input {
+    font-size: 50px;
+  }
+}
+.input input {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font: inherit;
+  padding-left: 0.5rem;
+}
+/* display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 4vw;
+  } */
+
+.input label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.input input {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 4vw;
+  padding-left: 0.5rem;
+}

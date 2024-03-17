@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Playfair+Display:ital@1&display=swap");
+
+.fonts {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 100;
+  margin-top: 2vw;
+  text-shadow: 1px 1px 1px blue, 0 0 0.5em rgba(0, 0, 255, 0.671),
+    0 0 0.5em rgba(1, 1, 255, 0.644);
+  color: white;
+  font-family: myFirstFont;
+}
+.myelement {
+  filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+  height: 55px;
+  margin-top: 2vw;
+  margin-left: 16vw;
+  width: 240px;
+}
+.membername {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+.stepname {
+  text-align: center;
+
+  font-size: 1.1vw;
+  color: black;
+}
+.registerpage {
+  width: 100vw;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  background-image: url("./components/assets/tenor.gif");
+}
+.nxt_btn{
+  margin: 1vw;
+}
+.inputState input:placeholder-shown {
+  color: white;
+  font-size: 1vw;
+}
+.gender {
+  color: white;
+  margin-top: 1vw;
+  font-size: 0.7vw;
+}
+.radio_label label {
+  font-size: 3vw;
+}
+.btn {
+  font-size: 0.8vw;
+}
+.inputState input {
+  color: white;
+  font-size: 0.8vw;
+}
+.stepname {
+  color: white;
+}
+.stepclass {
+  margin-top: 3vw;
+}
+.team_related {
+  padding: 1vw;
+  text-align: center;
+  margin: 8vw auto;
+}
+.noteam {
+  margin: 2vw;
+  text-align: center;
+}
+.addteam {
+  margin-top: 1vw;
+}
+.utr_Card {
+  width: 50%;
+  margin: auto;
+  margin-top: 2vw;
+  padding: 1vw;
+}
+.final_submit {
+  text-align: center;
+  width: 30%;
+  margin-top: 5vw;
+  margin: auto;
+}
+.final_submit_text {
+  text-align: center;
+  width: 100%;
+  margin-top: 6vw;
+  margin-bottom: 2vw;
+}
+
+@media (max-width: 460px) {
+  .registerpage {
+    width: 100vw;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    background-image: url("./components/assets/tenor.gif");
+  }
+  .final_submit_text {
+    text-align: center;
+    width: 100%;
+    margin-top: 22vw;
+    margin-bottom: 5vw;
+  }
+  .inputState input:placeholder-shown {
+    color: white;
+    font-size: 3vw;
+  }
+  .gender {
+    color: white;
+    margin-top: 3vw;
+    font-size: 3vw;
+  }
+  .inputState input {
+    color: white;
+    font-size: 3vw;
+  }
+  .fonts {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 100;
+    margin-top: 2vw;
+    text-shadow: 1px 1px 1px blue, 0 0 0.5em rgba(0, 0, 255, 0.671),
+      0 0 0.5em rgba(1, 1, 255, 0.644);
+    color: white;
+    font-family: myFirstFont;
+  }
+  .stepname {
+    font-size: 2.4vw;
+    color: white;
+  }
+  .team_related {
+    padding: 1vw;
+    text-align: center;
+    margin: 8vw auto;
+    width: 60%;
+  }
+}
+.inputclass {
+  margin: 3vw auto;
+  padding: 1rem;
+  width: 90%;
+  height: 70vh;
+}
+
+.input label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#gender {
+  color: white;
+  font-size: 2vw;
+}
+
+.inputState:focus label {
+  margin-bottom: 5vw;
+  font-size: 1vw;
+}
+
+.input input {
+  display: block;
+  width: 100%;
+  padding: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.genderDetails h2 {
+  margin-top: 1vw;
+  margin-left: 5px;
+  font-size: 0.8vw;
+}
+.submitButtonForm {
+  margin-top: 0.8vw;
+  font-size: 0.8vw;
+}
