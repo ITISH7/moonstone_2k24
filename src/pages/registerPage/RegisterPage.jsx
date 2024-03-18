@@ -844,14 +844,17 @@ const Register = () => {
           </Card>
         )}
         {!isAuthenticated && (
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={loginWithRedirect}
-            fullWidth
-          >
-            Login to Register
-          </Button>
+          <Card className={styles.loginCard}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => loginWithRedirect()}
+
+              className={styles.ltr}
+            >
+              Login to Register
+            </Button>
+          </Card>
         )}
       </div>
     </>
