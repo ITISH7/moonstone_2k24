@@ -15,15 +15,7 @@ import classes from "./registerpage.module.css";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 // valid adhar number testing :- 367598346015
-import {
-  Card as CardMui,
-  Typography,
-  TextField,
-  Button,
-  Stepper,
-  Step,
-  StepLabel,
-} from "@mui/material";
+import { Card as CardMui, Typography, TextField, Button, Stepper, Step, StepLabel } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -32,12 +24,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 function getSteps(maxl, fees) {
   const maxsize = Number(maxl);
   if (maxsize > 1 && fees > 0) {
-    return [
-      "Basic information",
-      "Team related",
-      "Registration Payment",
-      "Final Submit",
-    ];
+    return ["Basic information", "Team related", "Registration Payment", "Final Submit"];
   } else if (fees > 0 && maxsize === 1) {
     return ["Basic information", "Registration Payment", "Final Submit"];
   } else if (maxsize === 1 && fees === 0) {
@@ -78,7 +65,7 @@ function validateAdhaar(aadhaar_number) {
   }
 }
 const BasicDetails = (props) => {
-  const { getAccessTokenSilently } = useAuth0()
+  const { getAccessTokenSilently } = useAuth0();
   const [email, setemail] = useState("");
   const emailHandler = (event) => {
     setemail(event.target.value);
@@ -105,20 +92,10 @@ const BasicDetails = (props) => {
   };
 
   const submitHandler = async (event) => {
-    const token = await getAccessTokenSilently()
+    const token = await getAccessTokenSilently();
     event.preventDefault();
-    if (
-      fullName === "" ||
-      email === "" ||
-      Phonenumber === "" ||
-      validateAdhaar(adharnumber) === "false" ||
-      gender === null ||
-      collegename === "" ||
-      email !== props.useremail
-    ) {
-      alert(
-        "you have given wrong details in registration please correct it mightbe entered email and login email are different "
-      );
+    if (fullName === "" || email === "" || Phonenumber === "" || validateAdhaar(adharnumber) === "false" || gender === null || collegename === "" || email !== props.useremail) {
+      alert("you have given wrong details in registration please correct it mightbe entered email and login email are different ");
     } else {
       // console.log({
       //   email: email,
@@ -130,21 +107,25 @@ const BasicDetails = (props) => {
       // });
       // console.log(email,props.eventid,props.eventName)
       axios
-        .post("https://moonstone-backend-new.onrender.com/loaddata/loading", {
-          email: props.useremail,
-          eventid: props.eventid,
-          eventName: props.eventName,
-          phoneno:Phonenumber
-        }, {
-          headers: {
-            Authorization: `Bearer ${token}`,
+        .post(
+          "https://moonstone-backend-new.onrender.com/loaddata/loading",
+          {
+            email: props.useremail,
+            eventid: props.eventid,
+            eventName: props.eventName,
+            phoneno: Phonenumber,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
-        })
+        )
         .then((res) => {
           console.log("hello");
         })
         .catch((err) => {
-          console.log(err)
+          console.log(err);
         });
       let finalstep;
       if (props.length === 2) {
@@ -231,31 +212,10 @@ const BasicDetails = (props) => {
           <FormLabel id="demo-row-radio-buttons-group-label">
             <h1 className={classes.gender}>Gender</h1>
           </FormLabel>
-          <RadioGroup
-            row
-            aria-labelledby="demo-row-radio-buttons-group-label"
-            name="row-radio-buttons-group"
-            value={gender}
-            onChange={genderhandler}
-          >
-            <FormControlLabel
-              className={classes.radio_label}
-              value="female"
-              control={<Radio />}
-              label="Female"
-            />
-            <FormControlLabel
-              value="male"
-              control={<Radio />}
-              label="Male"
-              className={classes.radio_label}
-            />
-            <FormControlLabel
-              value="other"
-              control={<Radio />}
-              label="Other"
-              className={classes.radio_label}
-            />
+          <RadioGroup row aria-labelledby="demo-row-radio-buttons-group-label" name="row-radio-buttons-group" value={gender} onChange={genderhandler}>
+            <FormControlLabel className={classes.radio_label} value="female" control={<Radio />} label="Female" />
+            <FormControlLabel value="male" control={<Radio />} label="Male" className={classes.radio_label} />
+            <FormControlLabel value="other" control={<Radio />} label="Other" className={classes.radio_label} />
           </RadioGroup>
           <Button
             variant="contained"
@@ -305,9 +265,7 @@ const TeamDetails = (props) => {
       } else {
         finalstep = false;
       }
-      props.teamdata([TeamMember], props.activeStep + 1, finalstep, [
-        aadharlist,
-      ]);
+      props.teamdata([TeamMember], props.activeStep + 1, finalstep, [aadharlist]);
     }
   };
   const adddatahandler = () => {
@@ -349,37 +307,14 @@ const TeamDetails = (props) => {
     <>
       <Card className={classes.team_related}>
         {
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={addmemberHandler}
-            fullWidth
-            disabled={count >= props.limit}
-            className={classes.addteam}
-          >
+          <Button variant="contained" color="primary" onClick={addmemberHandler} fullWidth disabled={count >= props.limit} className={classes.addteam}>
             Add individual team Member Details
           </Button>
         }
         {cardIsShown && (
           <Modal hideCard={hideCardHandler}>
-            <TextField
-              id="name"
-              label="Team member Name"
-              variant="outlined"
-              placeholder="Enter Team member Name"
-              fullWidth
-              margin="normal"
-              onChange={nameOnchangeHandler}
-            />
-            <TextField
-              id="adharnumber"
-              label="Enter aadhar  number"
-              variant="outlined"
-              placeholder="Enter Team member Aadhar number"
-              fullWidth
-              margin="normal"
-              onChange={aadharNumberOnChangeHandler}
-            />
+            <TextField id="name" label="Team member Name" variant="outlined" placeholder="Enter Team member Name" fullWidth margin="normal" onChange={nameOnchangeHandler} />
+            <TextField id="adharnumber" label="Enter aadhar  number" variant="outlined" placeholder="Enter Team member Aadhar number" fullWidth margin="normal" onChange={aadharNumberOnChangeHandler} />
             <Button
               onClick={() => {
                 SetCartIsShown(false);
@@ -387,11 +322,7 @@ const TeamDetails = (props) => {
             >
               back
             </Button>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={adddatahandler}
-            >
+            <Button variant="contained" color="primary" onClick={adddatahandler}>
               Next
             </Button>
           </Modal>
@@ -402,43 +333,21 @@ const TeamDetails = (props) => {
           </div>
         )}
         {TeamMember.length > 0 ? (
-          <Grid
-            container
-            spacing={{ xs: 2, md: 3 }}
-            columns={{ xs: 2, sm: 4, md: 8 }}
-          >
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 8 }}>
             {TeamMember.map((member, index) => (
               <Grid item xs={2} sm={4} md={4} key={index}>
                 <CardMui>
                   <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                      className={styles.membername}
-                    >
+                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom className={styles.membername}>
                       Team member
                     </Typography>
-                    <Typography
-                      variant="h5"
-                      component="div"
-                      className={styles.membername}
-                    >
+                    <Typography variant="h5" component="div" className={styles.membername}>
                       {member.name}
                     </Typography>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                      className={styles.membername}
-                    >
+                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom className={styles.membername}>
                       Aadhar Number
                     </Typography>
-                    <Typography
-                      sx={{ fontSize: 18 }}
-                      component="div"
-                      className={styles.membername}
-                    >
+                    <Typography sx={{ fontSize: 18 }} component="div" className={styles.membername}>
                       {member.aadhar_no}
 
                       <br />
@@ -464,12 +373,7 @@ const TeamDetails = (props) => {
         ) : (
           <h3 className={classes.noteam}>No team members added yet</h3>
         )}
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleNext}
-          className={classes.nxt_btn}
-        >
+        <Button variant="contained" color="primary" onClick={handleNext} className={classes.nxt_btn}>
           {props.activeStep === props.length - 1 ? "Submit " : "Next"}
         </Button>
       </Card>
@@ -500,31 +404,12 @@ const Payment = (props) => {
   return (
     <>
       <CardMui className={classes.utr_Card}>
-        <CardMedia
-          height={300}
-          component="img"
-          image={props.qr}
-          title="green iguana"
-        />
+        <CardMedia height={300} component="img" image={props.qr} title="green iguana" />
         <CardContent>
-          <Typography
-            gutterBottom
-            variant="h5"
-            component="div"
-            className={styles.membername}
-          >
+          <Typography gutterBottom variant="h5" component="div" className={styles.membername}>
             fees :{props.fees}RS
           </Typography>
-          <TextField
-            id="Utr-number"
-            label="Your UTR Number (Transaction id)"
-            variant="outlined"
-            placeholder="Enter your UTR Number (Transaction Id)"
-            fullWidth
-            margin="normal"
-            value={utrnumber}
-            onChange={utrnumberHandler}
-          ></TextField>
+          <TextField id="Utr-number" label="Your UTR Number (Transaction id)" variant="outlined" placeholder="Enter your UTR Number (Transaction Id)" fullWidth margin="normal" value={utrnumber} onChange={utrnumberHandler}></TextField>
         </CardContent>
         <Button variant="contained" color="primary" onClick={handleNext}>
           {props.activeStep === props.length - 1 ? "Submit " : "Next"}
@@ -534,8 +419,7 @@ const Payment = (props) => {
   );
 };
 const Register = () => {
-  const { loginWithRedirect, isAuthenticated, getAccessTokenSilently, user } =
-    useAuth0();
+  const { loginWithRedirect, isAuthenticated, getAccessTokenSilently, user } = useAuth0();
   const [finalsubmitloading, setfinalsubmitlaoding] = useState(false);
   const [notsubmitted, setnotsubmitted] = useState(true);
   const [adharlist, setAdharlist] = useState([]);
@@ -746,11 +630,7 @@ const Register = () => {
             >
               Register
             </h4>
-            <Stepper
-              alternativeLabel
-              activeStep={activeStep}
-              className={classes.stepclass}
-            >
+            <Stepper alternativeLabel activeStep={activeStep} className={classes.stepclass}>
               {steps.map((step, index) => {
                 const labelProps = {};
                 const stepProps = {};
@@ -763,59 +643,16 @@ const Register = () => {
                 );
               })}
             </Stepper>
-            {!zerostep && (
-              <BasicDetails
-                activeStep={activeStep}
-                nextstep={getbasicdataHandler}
-                length={length}
-                useremail={user.email}
-                eventid={eventid}
-                eventName={eventName}
-              />
-            )}
-            {firststep && Number(maxsize) > 1 && (
-              <TeamDetails
-                limit={maxsize}
-                teamdata={getteamdatahandler}
-                activeStep={activeStep}
-                length={length}
-                eventid={eventid}
-                adharno={adharlist}
-                minsize={minsize}
-              />
-            )}
+            {!zerostep && <BasicDetails activeStep={activeStep} nextstep={getbasicdataHandler} length={length} useremail={user.email} eventid={eventid} eventName={eventName} />}
+            {firststep && Number(maxsize) > 1 && <TeamDetails limit={maxsize} teamdata={getteamdatahandler} activeStep={activeStep} length={length} eventid={eventid} adharno={adharlist} minsize={minsize} />}
 
-            {secondstep && fees > 0 && (
-              <Payment
-                qr={qr}
-                fees={fees}
-                activeStep={activeStep}
-                length={length}
-                utr={getutrhandler}
-              />
-            )}
-            {firststep && Number(maxsize) === 1 && fees > 0 && (
-              <Payment
-                qr={qr}
-                fees={fees}
-                activeStep={activeStep}
-                length={length}
-                utr={getutrhandler}
-              />
-            )}
+            {secondstep && fees > 0 && <Payment qr={qr} fees={fees} activeStep={activeStep} length={length} utr={getutrhandler} />}
+            {firststep && Number(maxsize) === 1 && fees > 0 && <Payment qr={qr} fees={fees} activeStep={activeStep} length={length} utr={getutrhandler} />}
 
             {finalstep && notsubmitted && (
               <div className={classes.final_submit}>
-                <h3 className={classes.final_submit_text}>
-                  Thanks for Registration!! please click on Final Submit to
-                  submit and wait for alert or pop up message
-                </h3>
-                <Button
-                  variant="contained"
-                  color="success"
-                  fullWidth
-                  onClick={FinalsubmitHandler}
-                >
+                <h2 className={classes.final_submit_text}>Please click on Final Submit to submit and wait for alert or pop up message</h2>
+                <Button variant="contained" color="success" fullWidth onClick={FinalsubmitHandler}>
                   {" "}
                   Final submit
                 </Button>
@@ -838,21 +675,14 @@ const Register = () => {
               >
                 {" "}
                 Submitted
-                <br />
-                Check your Inbox!{" "}
+                <br />{" "}
               </p>
             )}
           </Card>
         )}
         {!isAuthenticated && (
           <Card className={styles.loginCard}>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => loginWithRedirect()}
-
-              className={styles.ltr}
-            >
+            <Button variant="contained" color="primary" onClick={() => loginWithRedirect()} className={styles.ltr}>
               Login to Register
             </Button>
           </Card>
