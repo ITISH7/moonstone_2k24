@@ -557,7 +557,7 @@ const Register = () => {
           setnotsubmitted(false);
         })
         .catch((err) => {
-          alert("unable to register ! try again");
+          alert("unable to register ! Login again");
           console.log(err);
         });
     } else {
@@ -594,7 +594,7 @@ const Register = () => {
           setnotsubmitted(false);
         })
         .catch((err) => {
-          alert("unable to register ! try again");
+          alert("unable to register ! Login again");
           console.log(err);
         });
     }
