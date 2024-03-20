@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Sponsor.module.css'
-import img from '../assets/sponsor.png'
+import img from '../assets/sponsor.jpg'
 
 const Sponsor = () => {
     return (

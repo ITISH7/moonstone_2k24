@@ -25,7 +25,8 @@
 
 .details {
   flex-basis: 75%;
-  color: #fff;
+  /* background-color:    #fff; */
+  /* border-radius: 50%; */
 }
 
 .heading {
@@ -96,9 +97,10 @@
   margin-bottom: 40px;
 }
 .spo {
-  margin-left: 15vw;
+  margin-left: 12vw;
   max-width: 100%;
   height: auto;
+  border-radius: 7vw;
 }
 @media screen and (max-width: 460px) {
   .about {
@@ -107,6 +109,7 @@
   }
   .spo {
     margin-left: 0vw;
+    border-radius: 17vw;
 
     margin-top: 10vw;
   }
