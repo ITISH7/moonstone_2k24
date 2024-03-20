@@ -43,11 +43,15 @@
   color: white;
   font-family: myFirstFont;
   font-size: 6vw;
+  margin-top: 6vw;
+  margin-bottom: -6vw;
 }
 
 @media screen and (max-width: 480px) {
   .heading1 {
     font-size: 10vw;
+    margin-top: 16vw;
+    margin-bottom: -16vw;
   }
 }
 
@@ -90,4 +94,20 @@
 }
 .btn {
   margin-bottom: 40px;
+}
+.spo {
+  margin-left: 15vw;
+  max-width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 460px) {
+  .about {
+    flex-direction: column;
+    height: 40vh;
+  }
+  .spo {
+    margin-left: 0vw;
+
+    margin-top: 10vw;
+  }
 }
