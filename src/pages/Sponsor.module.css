@@ -24,7 +24,11 @@
 }
 
 .details {
-  flex-basis: 75%;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin-left: 0px;
+  position: relative;
   /* background-color:    #fff; */
   /* border-radius: 50%; */
 }
@@ -97,15 +101,30 @@
   margin-bottom: 40px;
 }
 .spo {
-  margin-left: 12vw;
+  margin-left: 2vw;
   max-width: 100%;
   height: auto;
   border-radius: 7vw;
+}
+.spo2 {
+  margin-left: 2vw;
+  height: auto;
+  width: auto;
+  border-radius: 8vw;
 }
 @media screen and (max-width: 460px) {
   .about {
     flex-direction: column;
     height: 40vh;
+  }
+  .details{
+    flex-direction: column;
+  }
+  .spo2{
+    margin-left: 0vw;
+    border-radius: 17vw;
+
+    margin-top: 10vw;
   }
   .spo {
     margin-left: 0vw;
