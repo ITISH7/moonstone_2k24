@@ -16,15 +16,16 @@ const Crsl = () => {
                     <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728635811/SaveClip.App_450159428_791755459794774_8527030572328470829_n_do5svl.jpg" alt="" />
                 </div>
                 <div className={classes.scroller_in}>
-                {/* <img src="https://res.cloudinary.com/dulzutyqm/image/upload/v1709542830/img3_un2khg.jpg" alt="" />
-                <img src="https://res.cloudinary.com/dulzutyqm/image/upload/v1709574569/img17_xxarsz.jpg" alt="" />
-                    <img src="https://res.cloudinary.com/dulzutyqm/image/upload/v1709542844/img34_hiqhan.jpg" alt="" />
-                    <img src="https://moonstone.onrender.com/images/13.webp" alt="" />
-                    <img src="https://res.cloudinary.com/dulzutyqm/image/upload/v1709542830/img12_waemq3.jpg" alt="" />
-                    <img src="https://res.cloudinary.com/dulzutyqm/image/upload/v1709542831/img6_yczbbm.jpg" alt="" />
-                    <img src="https://www.medicaps.ac.in/resources/img/For-Students--img/Life@MU/5.%20Sports_11zon.jpg" alt="" />
-                    <img src="https://moonstone.onrender.com/images/10.jpg" alt="" />
-                    <img src="https://www.medicaps.ac.in/resources/img/For-Students--img/Life@MU/2b.%20Life@MU_11zon.jpg" alt="" /> */}
+                <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636832/SaveClip.App_434335202_1565380737615330_382867321566186990_n_wfbpa5.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636832/SaveClip.App_434362512_399532576360733_1883271924429448149_n_gmquvz.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636832/SaveClip.App_434263124_261185910390054_5085116166518271731_n_kaypzd.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636834/SaveClip.App_452195160_799904722313181_6453146402425761982_n_b3bkhw.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636832/SaveClip.App_434561934_786970433340015_3565513365893367969_n_a7j6yu.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636834/SaveClip.App_452098112_799904695646517_7443917146098365544_n_t2jhzw.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636833/SaveClip.App_453976828_808300371473616_3876492190915780622_n_yuoano.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728636834/SaveClip.App_453846537_808300384806948_7458678361663714931_n_nvljeo.jpg" alt="" />
+                    <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728635811/SaveClip.App_450147023_791755416461445_8337933301269881048_n_mopfls.jpg" alt="" />
+                </div>
                 </div>
     </div>
   )
