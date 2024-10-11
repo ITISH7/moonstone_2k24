@@ -9,7 +9,7 @@ const AboutVideo = () => {
       <section id="about" className={classes.aboutSec}>
         <div className={classes.about}>
           <div className={classes.composition}>
-            <video src="https://res.cloudinary.com/dejlssoxx/video/upload/v1728637476/SaveClip.App_EC4DCDA98354752C70AF5AC0E6B36297_video_dashinit_qcu00w.mp4" autoPlay   loop></video>
+            <video src="" autoPlay   loop></video>
           </div>
           <div className={classes.details}>
             <h3 className={classes.heading}>
