@@ -22,7 +22,7 @@ const Leaderboard = () => {
       {/* section ke just neech se apn sir ka karnge nd secction ke beeche me student half and section ke upper baaki ke students ka */}
 
       <div className={classes.leaderboard_section}>
-        <h1 className={classes.heading}>Developers</h1>
+        <h1 className={classes.heading}> About Developer</h1>
 
         <div className={classes.home_container}>
           {/* isme mei map lagana hai */}
