@@ -45,11 +45,6 @@ const Leaderboard = () => {
                     <a href={ele.gmail} target="_blank" rel="noopener noreferrer" className={classes.footer_a_link}>
                       <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728639546/gmaillogo_e7ddsz.png " alt="" />
                     </a>
-
-                    {/* github */}
-                    <a href={ele.github} target="_blank" rel="noopener noreferrer" className={classes.footer_a_link}>
-                      <img src="https://res.cloudinary.com/dejlssoxx/image/upload/v1728639545/githublogo_tk1oij.jpg " alt="" />
-                    </a>
                   </div>
                 </div>
               </div>
