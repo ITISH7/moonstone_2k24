@@ -17,7 +17,7 @@ const About = () => {
           </div>
 
           <div className={classes.composition}>
-            <img className={classes.images} src={"https://res.cloudinary.com/dejlssoxx/image/upload/v1728637466/2024-07-08_ceizno.jpg"} alt="about" />
+            <img className={classes.images} src={"https://res.cloudinary.com/dejlssoxx/image/upload/v1728637466/2024-07-08_ceizno.jpg"} alt="" />
           </div>
         </div>
       </section>
