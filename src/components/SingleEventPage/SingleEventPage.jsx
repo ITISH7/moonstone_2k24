@@ -7,11 +7,12 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 
 const SingleEventPage = ({ eventData }) => {
+  const url = "https://portal.iqpaths.com/";
   const { eventId } = useParams();
   const [getdata, setgetdata] = useState([]);
   console.log(eventId);
   useEffect(() => {
-    axios.get(`https://moonstone-backend-new.onrender.com/events/${eventId}`).then((res) => {
+    axios.get(`${url}events/${eventId}`).then((res) => {
       console.log(res.data);
       setgetdata(res.data);
     });

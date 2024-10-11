@@ -9,10 +9,11 @@ import axios from "axios";
 import ReactGA from "react-ga";
 
 const Cultural = () => {
+    const url ="https://portal.iqpaths.com/";
     const [getculturalData, setGetCulturalData] = useState([]);
     useEffect(() => {
         axios
-            .get("https://moonstone-backend-new.onrender.com/events/alleventData")
+            .get(`${url}events/alleventData`)
             .then((res) => {
                 console.log(res.data);
                 setGetCulturalData(res.data);

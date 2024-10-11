@@ -7,10 +7,11 @@ import classes from "./Techno.module.css";
 import axios from "axios";
 import ReactGA from "react-ga";
 const Techno = () => {
+  const url = "https://portal.iqpaths.com/"
   const [getTechoData, setGetTechnoData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://moonstone-backend-new.onrender.com/events/alleventData")
+      .get(`${url}events/alleventData`)
       .then((res) => {
         // console.log(res.data);
         setGetTechnoData(res.data);

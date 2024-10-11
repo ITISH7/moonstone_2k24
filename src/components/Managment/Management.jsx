@@ -10,9 +10,10 @@ import ReactGA from "react-ga";
 
 const Management = () => {
     const [getManageData, setGetManageData] = useState([]);
+    const url = "https://portal.iqpaths.com/";
     useEffect(() => {
         axios
-            .get("https://moonstone-backend-new.onrender.com/events/alleventData")
+            .get(`${url}events/alleventData`)
             .then((res) => {
                 // console.log(res.data);
                 setGetManageData(res.data);

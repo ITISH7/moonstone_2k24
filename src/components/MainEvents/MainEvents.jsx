@@ -18,11 +18,11 @@ const MainEvents = () => {
   //   ],
   // });
 
-
+  const url= "https://portal.iqpaths.com/"
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://moonstone-backend-new.onrender.com/events/alleventData")
+      .get(`${url}events/alleventData`)
       .then((res) => {
         // console.log(res.data);
         setData(res.data);

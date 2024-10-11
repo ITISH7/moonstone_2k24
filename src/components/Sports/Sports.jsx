@@ -8,9 +8,10 @@ import axios from "axios";
 import ReactGA from "react-ga";
 const Sports = () => {
     const [getSportsData, setGetSportsData] = useState([]);
+    const url = "https://portal.iqpaths.com/";
     useEffect(() => {
         axios
-            .get("https://moonstone-backend-new.onrender.com/events/alleventData")
+            .get(`${url}events/alleventData`)
             .then((res) => {
                 // console.log(res.data);
                 setGetSportsData(res.data);
