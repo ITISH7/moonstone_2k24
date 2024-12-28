@@ -21,6 +21,24 @@ const Leaderboard = () => {
       linkdin: "https://www.linkedin.com/in/jayesh-tapdiya-01573024a/",
       gmail: "mailto:jayesh121220@gmail.com",
       github: "https://github.com/JayeshTapdiya12",
+    },
+    {
+      id: 3,
+      image: "https://res.cloudinary.com/dejlssoxx/image/upload/v1735369147/khushi_itdt5a.jpg",
+      name: "Khushi Sharma",
+      pos: "Full stack Developer",
+      linkdin: "https://www.linkedin.com/in/khushi-sharma-74a218224",
+      gmail: "mailto:khushidksharma@gmail.com",
+      github: "https://github.com/Khushisharma23",
+    },
+    {
+      id: 4,
+      image: "https://res.cloudinary.com/dejlssoxx/image/upload/v1735369412/mahak_yjby83.jpg",
+      name: "Mahak hardiya",
+      pos: "Full stack Developer",
+      linkdin: "https://www.linkedin.com/in/mahak-hardiya-650aa5230",
+      gmail: "mailto:mahakhardiya@gmail.com",
+      github: "https://github.com/mahakhardiya ",
     }
 
   ];
