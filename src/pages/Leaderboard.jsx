@@ -13,7 +13,15 @@ const Leaderboard = () => {
       gmail: "mailto:itishjain7@gmail.com",
       github: "https://github.com/ITISH7",
     },
-    
+    {
+      id: 2,
+      image: "https://res.cloudinary.com/dejlssoxx/image/upload/v1735368033/jayesh_qezr4j.jpg",
+      name: "jayesh tapdiya",
+      pos: "Full stack Developer",
+      linkdin: "https://www.linkedin.com/in/jayesh-tapdiya-01573024a/",
+      gmail: "mailto:jayesh121220@gmail.com",
+      github: "https://github.com/JayeshTapdiya12",
+    }
 
   ];
 
